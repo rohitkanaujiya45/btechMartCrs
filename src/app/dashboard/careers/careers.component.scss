@@ -1,0 +1,361 @@
+
+
+    /* Container for the images */
+    .gsc_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* Align all images to the top */
+    }
+
+    /* List styling */
+    .gsc_main {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    /* Styling for the left image */
+    .imgls {
+        flex: 0 0 50%;
+        /* Takes up half of the container */
+        padding-right: 10px;
+        /* Optional: space between the images */
+    }
+
+    .imgls img {
+        width: 100%;
+        height: 98.4%;
+        display: block;
+        object-fit: cover;
+    }
+
+    /* Styling for the right images container */
+    .righthw-container {
+        flex: 0 0 45%;
+        /* Container takes up 45% of the width */
+        display: flex;
+        flex-direction: column;
+        /* Stack the right images vertically */
+        justify-content: space-between;
+        padding-left: 0px;
+        /* Optional: space between the images */
+    }
+
+    /* Right images inside the container */
+    .righthw {
+        width: 100%;
+        height: 50%;
+        /* Make each image take 50% of the right column's height */
+        margin-bottom: 10px;
+        /* Space between stacked images */
+        overflow: hidden;
+        /* Ensures any overflow from images is hidden */
+    }
+
+    .righthw img {
+        width: 100%;
+        height: 100%;
+        /* Ensure images fill their container */
+        display: block;
+        object-fit: cover;
+        /* Ensures images fill their container without distortion */
+    }
+
+    // .widSep.bannerG {
+    //     width: 100vw;
+    //     height: 100vh;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     margin-bottom: 20px;
+    // }
+
+    // .gsc_container {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+    // /* Main image list settings */
+    // ul.gsc_main {
+    //     display: flex;
+    //     flex-direction: column;
+    //     width: 100%;
+    //     height: 100%;
+    //     list-style: none;
+    // }
+
+    // /* Top images container (2 images horizontally) */
+    // .imgls-container,
+    // .righthw-container {
+    //     display: flex;
+    //     width: 100%;
+    //     height: 50%; /* Each row takes 50% of the container height */
+    //     gap: 2px; /* Small gap between images */
+    // }
+
+    // .imgls, .righthw {
+    //     flex: 1; /* Ensure both images take equal width */
+    //     height: 100%;
+    // }
+
+    // .imgls img, .righthw img {
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    // }
+
+    // /* Make sure the images are responsive and fit within the screen size */
+    // @media (max-width: 768px) {
+    //     .gsc_main {
+    //         flex-direction: column;
+    //         /* Stack images vertically on smaller screens */
+    //     }
+
+    //     .imgls,
+    //     .righthw-container {
+    //         flex: 0 0 100%;
+    //         /* Make each image/container take full width */
+    //         margin-bottom: 20px;
+    //         /* Space between stacked images */
+    //     }
+
+    //     .righthw {
+    //         height: auto;
+    //         /* Allow the right images to take their natural height */
+    //     }
+    // }
+
+    /* Smooth Scroll Behavior */
+    .html {
+        scroll-behavior: smooth;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        width: 100%;
+        height: 75vh;
+    }
+
+    h1,
+    h3,
+    h4 {
+        font-size: 2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Container for Layout */
+    .cd {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Header */
+    header {
+        padding: 10px;
+        background-color: #fff;
+        // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+        background-color: #ffffff;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ffffff;
+        position: absolute;
+        top: 28%;
+        left: 73%;
+    }
+
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        // color: #333;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    /* Top Section */
+    .topText {
+        text-align: center;
+        margin-top: 90px;
+    }
+
+    .topText h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .topText .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .topText .button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Gallery Section */
+    .widSep.bannerG {
+        margin-top: 90px;
+        margin-bottom: 30px;
+    }
+.banner{
+    margin-top: 30px;
+    
+}
+
+
+
+    /* Values Section */
+    .headWrap {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .headWrap h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .deliteB ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .deliteB .cards li {
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        transition: all 0.3s ease;
+    }
+
+    .deliteB .cards li:hover {
+        transform: translateY(-10px);
+    }
+
+    .deliteB .deliteTrans img {
+        max-height: 150px;
+        object-fit: cover;
+    }
+
+    .deliteB .deliteTrans .background {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .deliteB .deliteTrans .background span {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .deliteB .deliteTrans .background p {
+        font-size: 1rem;
+    }
+
+    /* Current Openings Section */
+    #joinTeam {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #joinTeam h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    #joinTeam .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    #joinTeam .button:hover {
+        background-color: #0056b3;
+    }
+
+    #joinTeam p.paraSmall {
+        font-size: 0.9rem;
+        margin-top: 20px;
+        color: #666;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .cd {
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .topText h1 {
+            font-size: 2rem;
+        }
+
+        .topText .button {
+            font-size: 1rem;
+        }
+
+
+
+        .deliteB .cards li {
+            width: 100%;
+        }
+
+        #joinTeam .button {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .topText h1 {
+            font-size: 1.5rem;
+        }
+
+
+
+        .deliteB .cards li {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }

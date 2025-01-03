@@ -1,0 +1,242 @@
+// body {
+//     font-family: Arial, sans-serif;
+//     background-color: #f9f9f9;
+//     margin: 0;
+//     padding: 0;
+//   }
+  
+//   .help-container {
+//     max-width: 600px;
+//     margin: 30px auto;
+//     padding: 20px;
+//     background-color: #fff;
+//     border-radius: 8px;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 20px;
+//   }
+  
+//   header h2 {
+//     font-size: 1.5em;
+//   }
+  
+//   header img {
+//     height: 40px;
+//   }
+  
+//   .dropdown {
+//     margin-bottom: 20px;
+//   }
+  
+//   .dropdown-header {
+//     font-size: 1.2em;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+//   }
+  
+//   .dropdown-menu {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     border-top: 1px solid #ddd;
+//   }
+  
+//   .dropdown-item {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding: 10px 0;
+//     text-decoration: none;
+//     color: #000;
+//     font-size: 1em;
+//     border-bottom: 1px solid #ddd;
+//     cursor: pointer;
+//     transition: color 0.3s;
+//   }
+  
+//   .dropdown-item:hover {
+//     color: #007bff;
+//   }
+  
+//   .container {
+//     margin-top: 20px;
+//     display: none;
+//   }
+  
+//   .container.active {
+//     display: block;
+//   }
+  
+//   .complaint-form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 15px;
+//   }
+  
+//   .form-group {
+//     position: relative;
+//   }
+  
+//   input[type="text"],
+//   input[type="date"] {
+//     width: 100%;
+//     padding: 10px;
+//     border: 1px solid #ddd;
+//     border-radius: 5px;
+//     font-size: 14px;
+//     outline: none;
+//     transition: border-color 0.3s;
+//   }
+  
+//   input[type="text"]:focus,
+//   input[type="date"]:focus {
+//     border-color: #007bff;
+//   }
+  
+//   button {
+//     width: 100%;
+//     padding: 10px;
+//     border: none;
+//     border-radius: 5px;
+//     background-color: #ccc;
+//     color: #fff;
+//     font-size: 16px;
+//     cursor: not-allowed;
+//   }
+  
+//   button:disabled {
+//     background-color: #ccc;
+//     cursor: not-allowed;
+//   }
+  
+//   .no-records {
+//     margin-top: 20px;
+//     text-align: center;
+//     color: #999;
+//   }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.help-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h2 {
+  font-size: 1.5em;
+}
+
+header img {
+  height: 40px;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #000;
+  font-size: 1em;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dropdown-item:hover {
+  color: #007bff;
+}
+
+.container {
+  margin-top: 20px;
+  display: none;
+}
+
+.container.active {
+  display: block;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  position: relative;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.no-records {
+  margin-top: 20px;
+  text-align: center;
+  color: #999;
+}

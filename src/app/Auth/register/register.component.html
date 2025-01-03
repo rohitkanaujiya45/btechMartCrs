@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="form-section">
+    <div style="display: flex; gap: 4px;">
+      <span><i class="fa fa-arrow-left" (click)="onClose(false)" style="cursor: pointer;color: red;"></i> </span>
+      <h1>Signup!<br> For New Account.</h1>
+    </div>
+    <form [formGroup]="signupForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" formControlName="fullName">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" formControlName="email">
+
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" placeholder="Enter your Phone number" maxlength="10" formControlName="phone">
+
+      <label for="Location">Location</label>
+      <input type="text" id="Location" placeholder="Location" formControlName="location">
+
+
+      <button type="submit" class="btn-signup" (click)="saveUserInfo()" [disabled]="!signupForm.valid">Sign up</button>
+      <!-- <button type="button" class="btn-google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
+          Sign with Google
+        </button> -->
+    </form>
+    <p>You have an account? <a (click)="onClose(false)" style="cursor: pointer;">Login</a></p>
+  </div>
+  <div class="illustration-section">
+    <img
+      src="https://img.freepik.com/premium-vector/car-legal-document-report-agreement-check-loan-form-list-approved-vehicle-registration-tax-purchase_199628-448.jpg"
+      alt="Illustration">
+  </div>
+</div>

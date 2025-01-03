@@ -1,0 +1,63 @@
+.aboutus p {
+    font-size: 0.8rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #414141;
+}
+
+.aboutus a {
+    color: #0e0e0e;
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+
+.aboutus a:hover {
+    text-decoration: underline;
+}
+
+.aboutus h1 {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.aboutus section {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.aboutus .shadow24 {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(215, 215, 215);
+}
+
+.aboutus .gs_readmore {
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.aboutus a[target="_blank"] {
+    font-style: italic;
+    display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   
+
+    .aboutus h1 {
+        font-size: 2rem;
+    }
+
+    .aboutus p {
+        font-size: 0.9rem;
+    }
+}

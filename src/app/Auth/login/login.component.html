@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="form-section" style="margin-top: 1em;">
+    <div style="display: flex; gap: 4px;">
+      <span><i class="fa fa-arrow-left" (click)="onClose(false)" style="cursor: pointer;color: red;"></i> </span>
+      <h1>Hey there!<br>Welcome back.</h1>
+    </div>
+
+    <form>
+      <label for="mobile">Phone Number</label>
+      <input type="text" id="mobile" placeholder="Enter your Phone Number" [(ngModel)]="mobileNumber" 
+      maxlength="10">
+
+      <label for="password">OTP</label>
+      <input type="password" id="password" placeholder="Enter your email">
+
+      <div class="extras">
+        <label>
+           00:00
+        </label>
+        <a class="forgot-password" style="color: red;text-decoration: none; cursor: pointer;">Re send</a>
+      </div>
+
+      <button type="submit" class="btn-signin">Sign in</button>
+      <button type="button" class="btn-google">Sign with Google</button>
+    </form>
+    <p>Don't have an account? <a style="cursor: pointer;" (click)="gotoSignup()">Sign Up</a></p>
+  </div>
+  <div class="illustration-section">
+    <div class="illustration">
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/009/384/006/non_2x/couple-looking-to-buy-a-new-car-vector.jpg"
+        alt="Illustration">
+    </div>
+  </div>
+</div>

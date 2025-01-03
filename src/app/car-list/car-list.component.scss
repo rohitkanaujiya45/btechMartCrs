@@ -1,0 +1,783 @@
+.sidenav-container {
+  width: 200px;
+  max-height: 90vh;
+  /* To enable scrolling */
+  overflow-y: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  /* White background */
+  border: 1px solid #ddd;
+  /* Light border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+/* Expand All Filters button */
+.expand-filters-btn {
+  width: 100%;
+  padding: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1b1b1b;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+
+  // align-items: center;
+}
+
+.expand-filters-btn:hover {
+  background-color: #f0f0f0;
+  // color: #fff;
+}
+
+
+.filter-section {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'Poppins';
+}
+
+.filter-section .dropdown-btn {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 0px 7px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Poppins';
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-section .dropdown-btn:hover {
+  background: #f5f5f5;
+}
+
+.filter-section .toggle-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filter-section .dropdown-content {
+  display: none;
+  padding: 7px;
+  background: #f9f9f9;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  font-family: 'Poppins';
+
+}
+
+.filter-section .budget-range .range-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.filter-section .budget-range .slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.filter-section .price-range label,
+.filter-section .popular-brands label {
+  display: block;
+  margin: 5px 0;
+}
+
+.filter-section .price-range span,
+.filter-section .popular-brands span {
+  float: right;
+  color: #888;
+}
+
+.filter-section .search-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.filter-section .popular-brands .icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  /* Ensures the image maintains its aspect ratio */
+  border-radius: 3px;
+  /* Optional: Rounded corners for the icons */
+}
+
+
+/* General color scheme */
+:root {
+  --bg-color: #f4f4f9;
+  /* Light background */
+  --primary-color: #4caf50;
+  /* Green */
+  --hover-color: #388e3c;
+  /* Darker green on hover */
+  --text-color: #333;
+  /* Dark text */
+  --accent-color: #007bff;
+  /* Blue for icons and highlights */
+  --border-color: #ddd;
+  /* Light border color */
+  --btn-bg-color: #f0f0f0;
+  /* Button background */
+}
+
+/* Hide dropdown content by default */
+.hidden {
+  display: none;
+}
+
+.toggle-icon {
+  margin-left: 10px;
+}
+
+
+.nested-dropdown {
+  margin-left: 20px;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-content label {
+  display: block;
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.dropdown-content input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.show-more-icon {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.show-more-icon:hover {
+  color: #0056b3;
+}
+
+/* Checkbox style */
+.dropdown-content input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+// **********************************8
+// ****************************************88
+// ****************************************888
+// *************************************
+
+/* Container for the filter dropdown */
+/* Container for the filter dropdown */
+
+.filter-container {
+  display: flex;
+  position: absolute;
+  left: 90vh;
+  top: 20vh;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 14px 470px;
+}
+
+.filter-label {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-dropdown {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 125px;
+  margin-left: 30px;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns%3D%27http%3A//www.w3.org/2000/svg%27 viewBox%3D%270 0 4 5%27%3E%3Cpath fill%3D%27%23ccc%27 d%3D%27M2 0L0 2h4z%27/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.filter-dropdown:hover {
+  border-color: #007bff;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.info a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+/* filter style */
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  /* justify-content: space-between; */
+}
+
+.filters div {
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  /* Required for pseudo-element positioning */
+}
+
+.filters div:hover {
+  transform: scale(1.05);
+}
+
+/* Underline effect */
+.filters div::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: rgb(192, 0, 0);
+  /* Matches the text color */
+  transition: width 0.3s ease;
+}
+
+.filters div:hover::after {
+  width: 100%;
+  /* Full underline */
+}
+
+/* card  style */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.car-card-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.car-card {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(225, 225, 225);
+  overflow: hidden;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+  /* Narrower card width */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.car-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+/* .card-content {
+      padding: 10px;
+    } */
+
+.card-content {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.car-card h3 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.car-details {
+  color: #666;
+  font-size: 10px;
+}
+
+/* .price {
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 5px 0;
+    } */
+.price {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.savings {
+  color: #4caf50;
+  font-size: 10px;
+}
+
+.view-seller {
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.circle-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  margin-left: 8px;
+}
+
+.dotted-line {
+  border-top: 1px dotted #ccc;
+  margin: 10px 0;
+}
+
+.location {
+  font-size: 12px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.compare-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: #000000;
+  margin-left: 10px;
+}
+
+.compare-checkbox input {
+  width: 15px;
+  height: 15px;
+}
+
+.compare-checkbox span {
+  font-size: 12px;
+}
+
+.compare-checkbox input:hover {
+  cursor: pointer;
+}
+
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.favorite-icon {
+  font-size: 18px;
+  color: #d32f2f;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Curated Cars Section */
+.curated-cars {
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  /* Stack heading on top of cards */
+  padding: 10px;
+  background-color: #aae4fc;
+  border: 1px solid #2fc1ffe6;
+  border-radius: 10px;
+  gap: 6px;
+  /* Add some gap for cards */
+  width: 100%;
+  /* Ensure it fills the parent container */
+  box-sizing: border-box;
+  /* Prevents overflow */
+}
+
+/* Heading inside the container */
+.categories h2 {
+  text-align: left;
+  /* Align heading to the left */
+  margin: 0 0 10px 0;
+  /* Add spacing below the heading */
+  font-size: 20px;
+  /* Adjust font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+}
+
+/* Cards container */
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  /* Align cards to the left */
+  flex-wrap: nowrap;
+  /* Keep cards in a single row */
+  gap: 6px;
+  /* Space between cards */
+  overflow-x: auto;
+  /* Enables scrolling if content overflows */
+  padding-bottom: 10px;
+  /* Add space at the bottom */
+  width: 100%;
+  /* Ensure cards take full container width */
+  box-sizing: border-box;
+  /* Prevents overflow */
+  scroll-snap-type: x mandatory;
+  /* Smooth scrolling */
+}
+
+/* Category Cards */
+.category-card {
+  flex: 0 0 auto;
+  width: 110px;
+  /* Reduced card width */
+  height: 130px;
+  /* Reduced card height */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+  /* Aligns cards during scrolling */
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+.category-card img {
+  width: 90%;
+  /* Slightly smaller images */
+  height: 70px;
+  /* Adjusted height for smaller cards */
+  object-fit: cover;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.category-card .text {
+  padding: 6px;
+  font-size: 10px;
+  /* Adjusted text size for smaller cards */
+  font-weight: 300;
+  color: #333;
+}
+
+/* Recently Viewed Cars */
+
+.recently {
+  display: flex;
+  flex-direction: column;
+  /* Stack heading on top of cards */
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ffffffe6;
+  border-radius: 5px;
+  gap: 6px;
+  /* Add some gap for cards */
+  width: 100%;
+  /* Ensure it fills the parent container */
+  box-sizing: border-box;
+  /* Prevents overflow */
+}
+
+/* Heading inside the container */
+.recently h2 {
+  text-align: left;
+  /* Align heading to the left */
+  margin: 0 0 10px 0;
+  /* Add spacing below the heading */
+  font-size: 20px;
+  /* Adjust font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+}
+
+/* bodytype */
+.bodytype {
+  display: flex;
+  flex-direction: column;
+  /* Stack heading on top of cards */
+  padding: 10px;
+
+  background-color: #aae4fc;
+  border: 1px solid #2fc1ffe6;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  gap: 6px;
+  /* Add some gap for cards */
+  width: 100%;
+  /* Ensure it fills the parent container */
+  box-sizing: border-box;
+  /* Prevents overflow */
+}
+
+/* Heading inside the container */
+.bodytype h2 {
+  text-align: left;
+  /* Align heading to the left */
+  margin: 0 0 10px 0;
+  /* Add spacing below the heading */
+  font-size: 1rem;
+  /* Adjust font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+}
+
+/* Cards container */
+.bodycards {
+  display: flex;
+  justify-content: flex-start;
+  /* Align cards to the left */
+  flex-wrap: nowrap;
+  /* Keep cards in a single row */
+  gap: 6px;
+  /* Space between cards */
+  overflow-x: auto;
+  /* Enables scrolling if content overflows */
+  padding-bottom: 10px;
+  /* Add space at the bottom */
+  width: 100%;
+  /* Ensure cards take full container width */
+  box-sizing: border-box;
+  /* Prevents overflow */
+  scroll-snap-type: x mandatory;
+  /* Smooth scrolling */
+}
+
+/* Category Cards */
+.body-card {
+  flex: 0 0 auto;
+  width: 199px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+  /* Aligns cards during scrolling */
+}
+
+
+
+/* Images */
+.body-card img {
+  width: 100%;
+  margin-top: 16px;
+  aspect-ratio: 20 / 5;
+  margin-block-end: auto;
+  margin-bottom: 0px;
+  border: none;
+  object-fit: contain;
+}
+
+/* Text */
+.body-card .text {
+  padding: 6px;
+  font-size: 12px;
+  /* Adjusted text size for smaller cards */
+  font-weight: bold;
+  /* font-weight: 500; */
+  color: #333;
+}
+
+/* location type */
+.Locations {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  background-color: #aae4fc;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  gap: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Heading inside the container */
+.Locations h2 {
+  text-align: left;
+  /* Align heading to the left */
+  margin: 0 0 10px 0;
+  /* Add spacing below the heading */
+  font-size: 20px;
+  /* Adjust font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+}
+
+.location-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.location-btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 2px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location-btn:hover {
+  background-color: #eeeeee;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  /* Increase shadow on hover */
+}
+
+/* fule type */
+.Fueltype {
+  display: flex;
+  flex-direction: column;
+  /* Stack heading on top of cards */
+  padding: 10px;
+  background-color: #aae4fc;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  gap: 6px;
+  /* Add some gap for cards */
+  width: 100%;
+  /* Ensure it fills the parent container */
+  box-sizing: border-box;
+  /* Prevents overflow */
+}
+
+/* Heading inside the container */
+.Fueltype h2 {
+  text-align: left;
+  /* Align heading to the left */
+  margin: 0 0 10px 0;
+  /* Add spacing below the heading */
+  font-size: 20px;
+  /* Adjust font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+}
+
+.fule-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.fule-btn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 2px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fule-btn:hover {
+  background-color: #eeeeee;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  /* Increase shadow on hover */
+}

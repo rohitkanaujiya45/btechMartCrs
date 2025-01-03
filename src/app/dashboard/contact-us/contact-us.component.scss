@@ -1,0 +1,300 @@
+
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+    
+        .app-content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    
+        /* Breadcrumb */
+        .breadcrumb {
+            font-size: 0.7rem;
+            margin-bottom: 20px;
+        }
+    
+        .breadcrumb a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 5px;
+        }
+    
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    
+        .breadcrumb span {
+            color: #6c757d;
+        }
+    
+        /* Headings */
+        h1, h2 {
+            font-size: 1.2rem;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+    
+        /* Shadow Box */
+        .shadow24 {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid rgb(192, 192, 192);
+            margin-bottom: 20px;
+            min-height: 100px;
+        }
+    
+        .shadow24 .gsc_row {
+            display: flex; /* Enables flexbox for alignment */
+            align-items: center; /* Aligns items vertically in the center */
+            justify-content: space-between; /* Adds space between the items */
+        }
+    
+        /* Contact Details */
+        .callcontacts {
+            margin-right: 20px; /* Adds spacing between sections */
+        }
+    
+        .callcontacts .call {
+            font-weight: bold;
+            color: #495057;
+            display: block;
+            font-size: 1.1rem;
+            position: absolute;
+            margin-top: -234px;
+        }
+    
+        
+        .emaillinks a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: absolute;
+    margin-top: -17%;
+}
+    
+        .emaillinks a:hover {
+            text-decoration: underline;
+        }
+    
+        /* Form Section */
+        #formDiv {
+            max-width: 500px;
+            margin: 0; /* Remove unnecessary margins */
+        }
+    
+        .contactform .title p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 20px;
+        }
+    
+        .inputfield label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #6c757d;
+            font-size: 0.8rem;
+        }
+    
+        .inputfield input,
+        .inputfield textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #495057;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+    
+        .inputfield textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+    
+        .fileInput {
+            margin-top: 10px;
+        }
+    
+        .checkFormBox label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+        }
+    
+        .checkFormBox input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    
+        /* Button Styling */
+        .button {
+            background-color: #ff5900;
+            color: #fff;
+            border: none;
+            /* padding: 12px 20px; */
+            padding: 12px 75px;
+            margin-top: 15px;
+    margin-right: 257px;
+    margin-left: 150px;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ea3604;
+        }
+    
+       
+    
+
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+    
+            #formDiv {
+                margin: 0 auto;
+            }
+        }
+
+
+
+/* Container and General Styling */
+  .gsc_col-md-12 {
+    .shadow24 {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  /* Business with BtechMartCars Section */
+  .contactaddress {
+    .gsc_rows {
+      h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 40px;
+        position: relative;
+  
+        li.contact-item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          flex: 1;
+          padding-right: 20px;
+          position: relative;
+  
+          .callcontact {
+            .call {
+              font-size: 1rem;
+              font-weight: bold;
+              color: #555;
+              margin-bottom: 5px;
+            }
+  
+            .emaillink a {
+              font-size: 1rem;
+              color: #007bff;
+              text-decoration: none;
+  
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+  
+          /* Vertical Divider between contact items */
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            bottom: 10%;
+            width: 1px;
+            background-color: #ddd;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Our Offices Section */
+  .ourofficdetail {
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 40px;
+      position: relative;
+  
+      li.office-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 1;
+        position: relative;
+  
+        .subtitle {
+          font-size: 1.0rem;
+          font-weight: bold;
+          color: #555;
+          margin-bottom: 10px;
+        }
+  
+        address {
+          font-style: normal;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          color: #666;
+        }
+  
+        /* Vertical Divider between office items */
+        &:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 1px;
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+    

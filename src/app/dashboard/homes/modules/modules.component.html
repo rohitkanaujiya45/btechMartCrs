@@ -1,0 +1,28 @@
+<section class="conatiner">
+    <div class="brands-section mt-4 ">
+        <h4>Popular Category</h4>
+        <owl-carousel-o [options]="brandsOptions">
+            @for (item of categoryData; track $index) {
+            <ng-template carouselSlide>
+                <div class="brands">
+                    <img [src]="item?.url" alt="{{item.name}}">
+                </div>
+            </ng-template>
+            }
+        </owl-carousel-o>
+    </div>
+
+    <div class="brands-section mt-4">
+        <h4>Popular Brands</h4>
+        <owl-carousel-o [options]="brandsOptions">
+            @for (item of brandsData; track $index) {
+            <ng-template carouselSlide>
+                <div class="brands">
+                    <img [src]="item?.url" alt="{{item.name}}">
+                </div>
+            </ng-template>
+            }
+        </owl-carousel-o>
+
+    </div>
+</section>

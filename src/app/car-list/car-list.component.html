@@ -1,0 +1,1051 @@
+<section class="conatiner">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sidenav-container">
+        <button class="expand-filters-btn">⚙ Expand All Filters</button>
+        <!-- budget -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('budgetDropdown')">
+            Budget
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="budgetDropdown" class="dropdown-content">
+            <div class="budget-range">
+              <div class="range-values">
+                <span>₹{{setRangeBudget}}</span>
+                <span>₹5,00,00,000</span>
+              </div>
+              <input type="range" min="0" max="5000000" [(ngModel)]="setRangeBudget" class="slider"
+                style="width: 100%;" />
+            </div>
+            <div class="price-range">
+              <label><input type="checkbox" /> Under ₹2 Lakh <span>562</span></label>
+              <label><input type="checkbox" /> ₹2 – ₹3 Lakh <span>677</span></label>
+              <label><input type="checkbox" /> ₹3 – ₹5 Lakh <span>1963</span></label>
+              <label><input type="checkbox" /> ₹5 – ₹8 Lakh <span>2087</span></label>
+              <label><input type="checkbox" /> ₹8 – ₹10 Lakh <span>702</span></label>
+              <label><input type="checkbox" /> Above ₹10 Lakh <span>2546</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- brand+model -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('brandModelDropdown')">
+            Brand + Model
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="brandModelDropdown" class="dropdown-content" style="display: none;">
+            <label>
+              <input type="checkbox" (click)="toggleDropdown('marutiDropdown')" />
+              Maruti <span>2001</span>
+            </label>
+            <div id="marutiDropdown" class="nested-dropdown" style="display: none;">
+              <label><input type="checkbox" /> Swift</label>
+              <label><input type="checkbox" /> Baleno</label>
+              <label><input type="checkbox" /> Ertiga</label>
+            </div>
+
+            <label>
+              <input type="checkbox" (click)="toggleDropdown('hyundaiDropdown')" />
+              Hyundai <span>1603</span>
+            </label>
+            <div id="hyundaiDropdown" class="nested-dropdown" style="display: none;">
+              <label><input type="checkbox" /> Creta</label>
+              <label><input type="checkbox" /> Venue</label>
+              <label><input type="checkbox" /> i20</label>
+            </div>
+
+            <label>
+              <input type="checkbox" (click)="toggleDropdown('hondaDropdown')" />
+              Honda <span>828</span>
+            </label>
+            <div id="hondaDropdown" class="nested-dropdown" style="display: none;">
+              <label><input type="checkbox" /> City</label>
+              <label><input type="checkbox" /> Amaze</label>
+              <label><input type="checkbox" /> Jazz</label>
+            </div>
+          </div>
+        </div>
+        <!-- Model Type. -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('modeltypeDropdown')">
+            Model Type
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="modeltypeDropdown" class="dropdown-content">
+            <div class="modeltype-range">
+              <div class="range-values">
+                <span>2002</span>
+                <span style="float: right;">2024</span>
+              </div>
+              <mat-slider min="2002" max="2024" style="width:100%">
+                <input value="2002" matSliderStartThumb >
+                <input value="2024" matSliderEndThumb>
+              </mat-slider>
+            </div>
+          </div>
+        </div>
+        <!-- Kilometer Driven -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('kilometertypeDropdown')">
+            Kilometer Driven
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="kilometertypeDropdown" class="dropdown-content">
+            <div class="kilometertype-range">
+              <div class="range-values">
+                <span>{{setKmDerive}} Kms</span>
+                <span style="float: right;">200000 Kms</span>
+              </div>
+              <input type="range" min="0" max="200000" [(ngModel)]="setKmDerive" class="slider" style="width: 100%;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Fuel Type -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('FuelDropdown')">
+            Fuel Type
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="FuelDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <label><input type="checkbox" /> Petrol <span>5914</span></label>
+              <label><input type="checkbox" /> Diesel <span>2225</span></label>
+              <label><input type="checkbox" /> CNG <span>353</span></label>
+              <label><input type="checkbox" /> Electric <span>38</span></label>
+              <label><input type="checkbox" /> LPG <span>7</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- body Type -->
+
+        <!-- Body Type -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('bodytypeDropdown')">
+            Body Type
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="bodytypeDropdown" class="dropdown-content" style="display: none;">
+            <div class="popular-brands">
+              <label>
+                <input type="checkbox" />
+                <img
+                  src="https://cdn.vectorstock.com/i/preview-2x/87/61/hatchback-car-body-type-line-icon-vector-41458761.webp"
+                  alt="SUV Icon" class="icon" />
+                SUV <span>5914</span>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <img src="https://cdn-icons-png.flaticon.com/512/151/151625.png" alt="Hatchback Icon" class="icon" />
+                Hatchback <span>2225</span>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <img
+                  src="https://cdn2.vectorstock.com/i/1000x1000/87/61/hatchback-car-body-type-line-icon-vector-41458761.jpg"
+                  alt="Sedan Icon" class="icon" />
+                Sedan <span>353</span>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <img src="https://c7.alamy.com/comp/KT1EMP/car-body-type-vector-illustration-icon-KT1EMP.jpg"
+                  alt="MUV Icon" class="icon" />
+                MUV <span>38</span>
+              </label>
+              <label>
+                <input type="checkbox" />
+                <img
+                  src="https://cdn.vectorstock.com/i/preview-2x/87/61/hatchback-car-body-type-line-icon-vector-41458761.webp"
+                  alt="Minivan Icon" class="icon" />
+                Minivan <span>7</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transmission -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('transmissionDropdown')">
+            Transmission
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="transmissionDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <label><input type="checkbox" /> Manual <span>5451</span></label>
+              <label><input type="checkbox" /> Automatic <span>3093</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Owner Ship -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('OwnershipDropdown')">
+            Ownership
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="OwnershipDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <label><input type="checkbox" /> First Owner <span>6379</span></label>
+              <label><input type="checkbox" /> Second Owner <span>4782</span></label>
+              <label><input type="checkbox" /> Unregistered <span>987</span></label>
+              <label><input type="checkbox" /> Third Owner Or More <span>54</span></label>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Categories -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('CategoriesDropdown')">
+            Categories
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="CategoriesDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <label><input type="checkbox" /> All Cars <span>6379</span></label>
+              <label><input type="checkbox" /> Partner Cars <span>4782</span></label>
+              <label><input type="checkbox" /> Certified Cars <span>987</span></label>
+              <label><input type="checkbox" /> Direct Owner Cars <span>228</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seats -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('SeatsDropdown')">
+            Seats
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="SeatsDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <label><input type="checkbox" /> 2 Seater <span>9</span></label>
+              <label><input type="checkbox" /> 4 Seaters <span>782</span></label>
+              <label><input type="checkbox" /> 5 Seaters <span>4987</span></label>
+              <label><input type="checkbox" /> 6 Seaters <span>1228</span></label>
+              <label><input type="checkbox" /> 7 Seaters <span>1987</span></label>
+              <label><input type="checkbox" /> 8 Seaters <span>2228</span></label>
+            </div>
+          </div>
+        </div>
+        <!-- RTO -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('CityDropdown')">
+            RTO
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="CityDropdown" class="dropdown-content">
+            <div class="popular-brands">
+              <!-- Primary Cities -->
+              <label><input type="checkbox" /> Mumbai <span>1056</span></label>
+              <label><input type="checkbox" /> Delhi <span>892</span></label>
+              <label><input type="checkbox" /> Bengaluru <span>1237</span></label>
+              <label><input type="checkbox" /> Hyderabad <span>784</span></label>
+              <label><input type="checkbox" /> Chennai <span>652</span></label>
+              <label><input type="checkbox" /> Pune <span>492</span></label>
+              <label><input type="checkbox" /> Kolkata <span>723</span></label>
+              <label><input type="checkbox" /> Jaipur <span>391</span></label>
+              <label><input type="checkbox" /> Ahmedabad <span>527</span></label>
+              <label><input type="checkbox" /> Lucknow <span>342</span></label>
+              <!-- Show More Cities Button -->
+              <button class="dropdown-btn" (click)="toggleDropdown('MoreCitiesDropdown')">Show More ▼</button>
+              <div id="MoreCitiesDropdown" class="dropdown-content hidden">
+                <!-- Additional Cities -->
+                <label><input type="checkbox" /> Chandigarh <span>278</span></label>
+                <label><input type="checkbox" /> Surat <span>303</span></label>
+                <label><input type="checkbox" /> Kochi <span>196</span></label>
+                <label><input type="checkbox" /> Nagpur <span>214</span></label>
+                <label><input type="checkbox" /> Indore <span>178</span></label>
+                <label><input type="checkbox" /> Patna <span>126</span></label>
+                <label><input type="checkbox" /> Bhopal <span>152</span></label>
+                <label><input type="checkbox" /> Guwahati <span>112</span></label>
+                <label><input type="checkbox" /> Mysuru <span>92</span></label>
+                <label><input type="checkbox" /> Coimbatore <span>134</span></label>
+                <label><input type="checkbox" /> Bhubaneswar <span>109</span></label>
+                <label><input type="checkbox" /> Vadodara <span>128</span></label>
+                <label><input type="checkbox" /> Varanasi <span>83</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Discount -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('DiscountDropdown')">
+            Discount
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="DiscountDropdown" class="dropdown-content">
+
+            <div class="price-range">
+              <label><input type="checkbox" /> Upto ₹20,000 <span>562</span></label>
+              <label><input type="checkbox" /> Upto ₹50,000 <span>677</span></label>
+              <label><input type="checkbox" /> Upto ₹1,00,000 <span>1963</span></label>
+              <label><input type="checkbox" /> Above ₹1,00,000 <span>2087</span></label>
+              <label><input type="checkbox" /> All Discounts <span>702</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Color -->
+        <div class="filter-section">
+          <button class="dropdown-btn" (click)="toggleDropdown('ColorDropdown')">
+            Color
+            <span class="toggle-icon">+</span>
+          </button>
+          <div id="ColorDropdown" class="dropdown-content">
+            <!-- <div class="search-box">
+                  <input type="text" placeholder="Search Color" />
+                </div> -->
+            <div class="color-options">
+              <!-- Color Options -->
+              <label><input type="checkbox" class="color-checkbox" data-color="#ff0000" /> <span class="color-label"
+                  style="background-color: #ff0000;"></span> Red <span>56</span></label>
+              <label><input type="checkbox" class="color-checkbox" data-color="#00ff00" /> <span class="color-label"
+                  style="background-color: #00ff00;"></span> Green <span>34</span></label>
+              <label><input type="checkbox" class="color-checkbox" data-color="#0000ff" /> <span class="color-label"
+                  style="background-color: #0000ff;"></span> Blue <span>72</span></label>
+              <label><input type="checkbox" class="color-checkbox" data-color="#ffff00" /> <span class="color-label"
+                  style="background-color: #ffff00;"></span> Yellow <span>45</span></label>
+              <label><input type="checkbox" class="color-checkbox" data-color="#ff00ff" /> <span class="color-label"
+                  style="background-color: #ff00ff;"></span> Pink <span>29</span></label>
+              <label><input type="checkbox" class="color-checkbox" data-color="#00ffff" /> <span class="color-label"
+                  style="background-color: #00ffff;"></span> Cyan <span>88</span></label>
+              <!-- Show More Colors Symbol -->
+              <span class="dropdown-btn" (click)="toggleDropdown('MoreColorsDropdown')">Show More ▼</span>
+              <div id="MoreColorsDropdown" class="dropdown-content hidden">
+                <!-- Additional Colors -->
+                <label><input type="checkbox" class="color-checkbox" data-color="#800080" /> <span class="color-label"
+                    style="background-color: #800080;"></span> Purple <span>18</span></label>
+                <label><input type="checkbox" class="color-checkbox" data-color="#808080" /> <span class="color-label"
+                    style="background-color: #808080;"></span> Grey <span>11</span></label>
+                <label><input type="checkbox" class="color-checkbox" data-color="#000000" /> <span class="color-label"
+                    style="background-color: #000000;"></span> Black <span>64</span></label>
+                <label><input type="checkbox" class="color-checkbox" data-color="#ffffff" /> <span class="color-label"
+                    style="background-color: #ffffff;"></span> White <span>92</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10">
+      <div class="container">
+        <h1>8530 Second Hand Cars in Delhi NCR</h1>
+        <p class="info">
+          There are 1876 certified second-hand cars in Delhi NCR currently available for sale of brands like
+          <a href="#">Maruti</a>, <a href="#">Hyundai</a>, <a href="#">Honda</a>, <a href="#">Tata</a>, <a
+            href="#">Mahindra</a>, <a href="#">Toyota</a>.
+          Used/Old cars price start from ₹40,000 in Delhi NCR.
+        </p>
+
+        <div class="row mb-4">
+          <div class="col-12">
+            <mat-tab-group>
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  Under 3 Lakh
+                </ng-template>
+              </mat-tab>
+            
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  Under 5 Lakh
+                </ng-template>
+              </mat-tab>
+            
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  SUV Cars
+                </ng-template>
+              </mat-tab>
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  Sedan Cars
+                </ng-template>
+              </mat-tab>
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  Luxury Cars
+                </ng-template>
+              </mat-tab>
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  Relevance
+                </ng-template>
+              </mat-tab>
+            </mat-tab-group>
+            
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a [routerLink]="'/car-details'" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a [routerLink]="'/car-details'" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="Fueltype">
+          <div class="Fueltype">
+            <h2>Used Cars in Delhi NCR by Budget</h2>
+            <div class="fule-buttons">
+              <button class="fule-btn">Under ₹2 Lakh</button>
+              <button class="fule-btn">₹2 - ₹3 Lakh</button>
+              <button class="fule-btn">₹3 - ₹5 Lakh</button>
+              <button class="fule-btn">₹5 - ₹8 Lakh</button>
+              <button class="fule-btn">₹8 - ₹10 Lakh</button>
+              <button class="fule-btn">Above ₹10 Lakh</button>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="curated-cars">
+          <div class="categories">
+            <h2>Curated Cars Collection</h2>
+            <div class="cards">
+              <div class="category-card" data-category="budget">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="Budget Cars">
+                <div class="text"><strong>Budget Cars</strong><br>₹2 Lakh-25 Lakh</div>
+              </div>
+              <div class="category-card" data-category="suv">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="SUV Cars">
+                <div class="text"><strong>SUV Cars</strong><br>Stylish & Safe</div>
+              </div>
+              <div class="category-card" data-category="cng">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="CNG Cars">
+                <div class="text"><strong>CNG Cars</strong><br>Cost-Effective Cars</div>
+              </div>
+              <div class="category-card" data-category="automatic">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="Automatic Cars">
+                <div class="text"><strong>Automatic Cars</strong><br>Effortless Drives</div>
+              </div>
+              <div class="category-card" data-category="as-good-as-new">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="As good as New">
+                <div class="text"><strong>As good as New</strong><br>Under 20,000 km</div>
+              </div>
+              <div class="category-card" data-category="luxury">
+                <img src="https://img.freepik.com/free-photo/view-three-dimensional-car_23-2150998581.jpg"
+                  alt="Luxury Cars">
+                <div class="text"><strong>Luxury Cars</strong><br>Comfort with Class</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="Recently-Viewed-Cars">
+          <div class="recently">
+            <h2>Recently Viewed Cars</h2>
+            <div class="row">
+              <div class="col-md-4 col-6">
+                <div class="car-card under-3-lakh">
+                  <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                    alt="Maruti Swift Dzire">
+
+                  <div class="card-content">
+                    <h3>2022 Maruti Swift Dzire VXI</h3>
+                    <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                    <div class="icons">
+                      <i class="favorite-icon fas fa-heart"></i>
+                    </div>
+                    <p class="price">
+                      ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                      <!-- Compare Checkbox next to the price -->
+                      <label class="compare-checkbox">
+                        <input type="checkbox" class="compare-input" />
+                        <span>Compare</span>
+                      </label>
+                    </p>
+                    <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                          class="fas fa-angle-right"></i></span></a>
+                    <div class="dotted-line"></div>
+                    <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-6">
+                <div class="car-card under-3-lakh">
+                  <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                    alt="Maruti Swift Dzire">
+
+                  <div class="card-content">
+                    <h3>2022 Maruti Swift Dzire VXI</h3>
+                    <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                    <div class="icons">
+                      <i class="favorite-icon fas fa-heart"></i>
+                    </div>
+                    <p class="price">
+                      ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                      <!-- Compare Checkbox next to the price -->
+                      <label class="compare-checkbox">
+                        <input type="checkbox" class="compare-input" />
+                        <span>Compare</span>
+                      </label>
+                    </p>
+                    <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                          class="fas fa-angle-right"></i></span></a>
+                    <div class="dotted-line"></div>
+                    <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-6">
+                <div class="car-card under-3-lakh">
+                  <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                    alt="Maruti Swift Dzire">
+
+                  <div class="card-content">
+                    <h3>2022 Maruti Swift Dzire VXI</h3>
+                    <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                    <div class="icons">
+                      <i class="favorite-icon fas fa-heart"></i>
+                    </div>
+                    <p class="price">
+                      ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                      <!-- Compare Checkbox next to the price -->
+                      <label class="compare-checkbox">
+                        <input type="checkbox" class="compare-input" />
+                        <span>Compare</span>
+                      </label>
+                    </p>
+                    <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                          class="fas fa-angle-right"></i></span></a>
+                    <div class="dotted-line"></div>
+                    <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="Bodytype">
+          <div class="bodytype">
+            <h2>Body Type</h2>
+            <div class="bodycards">
+              <!-- MUV Body Type -->
+              <div class="body-card" data-category="muv">
+                <img src="https://stimg.cardekho.com/usedcar/icon/muv.png" alt="MUV Cars">
+                <div class="text">MUV</div>
+              </div>
+              <!-- Convertible Body Type -->
+              <div class="body-card" data-category="convertible">
+                <img src="https://stimg.cardekho.com/usedcar/icon/convertible.png" alt="Convertible Cars">
+                <div class="text">Convertible</div>
+              </div>
+              <!-- Sedan Body Type -->
+              <div class="body-card" data-category="sedan">
+                <img src="https://stimg.cardekho.com/usedcar/icon/sedan.png" alt="Sedan Cars">
+                <div class="text">Sedan</div>
+              </div>
+              <!-- Add more cards as needed -->
+              <div class="body-card" data-category="hatchback">
+                <img src="https://stimg.cardekho.com/usedcar/icon/hatchback.png" alt="Hatchback Cars">
+                <div class="text">Hatchback</div>
+              </div>
+              <div class="body-card" data-category="coupe">
+                <img src="https://stimg.cardekho.com/usedcar/icon/coupe.png" alt="Coupe Cars">
+                <div class="text">Coupe</div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="Locations">
+          <div class="Locations">
+            <h2>Nearby Locations</h2>
+            <div class="location-buttons">
+              <button class="location-btn">Ghaziabad</button>
+              <button class="location-btn">Gurgaon</button>
+              <button class="location-btn">Noida</button>
+              <button class="location-btn">Faridabad</button>
+              <button class="location-btn">Saharanpur (UP)</button>
+              <button class="location-btn">Anantapur</button>
+              <button class="location-btn">Karnal</button>
+              <button class="location-btn">Meerut</button>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="car-card under-3-lakh">
+              <img src="https://t4.ftcdn.net/jpg/05/37/32/57/360_F_537325726_GtgjRiyc37BLPn9OmisBVVZec9frLaL0.jpg"
+                alt="Maruti Swift Dzire">
+
+              <div class="card-content">
+                <h3>2022 Maruti Swift Dzire VXI</h3>
+                <p class="car-details mb-1">18,204 kms • Petrol • Manual</p>
+                <div class="icons">
+                  <i class="favorite-icon fas fa-heart"></i>
+                </div>
+                <p class="price">
+                  ₹2.9 Lakh <span class="savings">(Save ₹10,000)</span>
+                  <!-- Compare Checkbox next to the price -->
+                  <label class="compare-checkbox">
+                    <input type="checkbox" class="compare-input" />
+                    <span>Compare</span>
+                  </label>
+                </p>
+                <a href="#" class="view-seller">View Seller Details <span class="circle-icon"><i
+                      class="fas fa-angle-right"></i></span></a>
+                <div class="dotted-line"></div>
+                <p class="location mb-1"><i class="fas fa-map-marker-alt"></i> Singsandra, Bangalore</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

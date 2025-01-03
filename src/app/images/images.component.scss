@@ -1,0 +1,165 @@
+
+                        /* General styles */
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 0;
+                            padding: 0;
+                            background-color: #f9f9f9;
+                            color: #333;
+                        }
+                
+                        .container {
+                            max-width: 1200px;
+                            margin: auto;
+                            padding: 20px;
+                        }
+                
+                        /* Header styles */
+                        header h1 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+                
+                        header p {
+                            font-size: 16px;
+                            color: #555;
+                        }
+                
+                        /* Tabs and filters navigation */
+                        .tabs,
+                        .filters {
+                            display: flex;
+                            gap: 10px;
+                            margin: 20px 0;
+                        }
+                
+                        .tabs button,
+                        .filters button {
+                            position: relative;
+                            padding: 10px 15px;
+                            border: none;
+                            background-color: transparent;
+                            color: #333;
+                            font-size: 16px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            transition: color 0.3s;
+                        }
+                
+                        .tabs button:hover,
+                        .filters button:hover {
+                            color: #007bff;
+                        }
+                
+                        /* Hover underline effect */
+                        .tabs button::after,
+                        .filters button::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -5px;
+                            height: 2px;
+                            background-color: #007bff;
+                            transform: scaleX(0);
+                            transform-origin: center;
+                            transition: transform 0.3s ease-in-out;
+                        }
+                
+                        .tabs button:hover::after,
+                        .filters button:hover::after {
+                            transform: scaleX(1);
+                        }
+                
+                        /* Section styles */
+                        .section {
+                            margin-bottom: 30px;
+                        }
+                
+                        .section-header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 15px;
+                        }
+                
+                        .section-header h2 {
+                            font-size: 20px;
+                        }
+                
+                        .section-header h2 span {
+                            font-weight: normal;
+                            color: #777;
+                        }
+                
+                        /* Grid styles */
+                        .grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                            gap: 15px;
+                        }
+                
+                        /* Card styles */
+                        .card {
+                            background-color: #fff;
+                            border: 1px solid #ddd;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            text-align: center;
+                            transition: 0.3s;
+                            width: 60vh;
+                            height: 220px; /* Reduced card height */
+                        }
+                
+                        .card img {
+                            width: 100%;
+                            height: 175px; /* Reduced image height */
+                            /* object-fit: cover; */
+                        }
+                
+                        .card p {
+                            padding: 5px;
+                            font-size: 14px;
+                            color: #333;
+                        }
+                
+                        .card:hover {
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                        }
+                
+                        /* View More button */
+                                /* View More button */
+        .view-more {
+            display: inline-block;
+            margin: 0;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .view-more:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .section-header {
+            position: relative;
+        }
+
+        .section-header .view-more {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+         /* Divider line */
+         hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+                    

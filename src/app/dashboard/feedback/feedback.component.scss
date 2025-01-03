@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Optional for better visual contrast */
+    margin-top: 10px;
+margin-bottom: 10px;
+
+  }
+  
+  .feedback-container {
+    background: #fff;
+    padding: 20px 30px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Reduced max width */
+    border: 1px solid rgb(230, 230, 230);
+  
+    h2 {
+      margin-bottom: 15px; /* Reduced margin */
+      color: #333;
+      font-size: 18px; /* Slightly smaller font */
+    }
+  
+    form {
+      .form-group {
+        margin-bottom: 10px; /* Reduced margin between form groups */
+  
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+  
+        input[type="text"],
+        textarea,
+        input[type="file"],
+        select {
+          width: 100%;
+          padding: 8px; /* Reduced padding */
+          font-size: 14px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          background: #fff;
+          appearance: none;
+  
+          &:focus {
+            border-color: #ff5722;
+            outline: none;
+            box-shadow: 0 0 4px rgba(255, 87, 34, 0.5);
+          }
+        }
+  
+        textarea {
+          height: 80px; /* Reduced textarea height */
+        }
+  
+        select {
+          background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"%3E%3Cpath fill="%23777777" d="M7 10l5 5 5-5z"/%3E%3C/svg%3E') no-repeat right 10px center;
+          background-size: 10px;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+        }
+  
+        span {
+          font-size: 12px;
+          color: #777;
+        }
+      }
+  
+      .terms {
+        display: flex;
+        align-items: center;
+  
+        input {
+          margin-right: 10px;
+        }
+      }
+  
+      .submit-btn {
+        background-color: #ff5722;
+        color: #fff;
+        border: none;
+        padding: 8px 16px; /* Reduced padding */
+        font-size: 14px; /* Slightly smaller font */
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+  
+        &:hover {
+          background-color: #e64a19;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .feedback-container {
+      padding: 10px 15px; /* Further reduced padding for small screens */
+    }
+  }
+  

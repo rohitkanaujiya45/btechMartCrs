@@ -1,0 +1,664 @@
+// .hero {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 50px 20px;
+//     background: linear-gradient(135deg, #6541f7, #d72638);
+//     color: white;
+//     text-align: center;
+// }
+
+// .hero img {
+//     max-width: 100%;
+//     height: auto;
+//     margin: 20px 0;
+// }
+
+// .hero h2 {
+//     font-size: 2.5rem;
+//     margin: 0 0 20px;
+// }
+
+// .content {
+//     padding: 20px;
+//     text-align: center;
+// }
+
+// @media (min-width: 768px) {
+//     .hero {
+//         flex-direction: row;
+//         text-align: left;
+//     }
+
+//     .hero img {
+//         max-width: 40%;
+//     }
+
+//     .hero h2 {
+//         font-size: 3rem;
+//     }
+// }
+
+
+.containera {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Use full viewport height */
+  background: url('https://fixturbonext.wowtheme7.com/assets/img/hero/hero_bg_2_1.png') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 500px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+   justify-content: left; /* Center align buttons */
+  gap: 20px;
+}
+
+.butn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ff0000;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.butn:hover {
+  background-color: #eb0303;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+      font-size: 2rem;
+  }
+
+  .content p {
+      font-size: 0.9rem;
+  }
+
+  .btn {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+  }
+}
+
+
+// Booking Appointment
+.containerr {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 75px;
+    background: url('https://t4.ftcdn.net/jpg/05/21/93/17/360_F_521931702_TXOHZBa3tLVISome894Zc061ceab4Txm.jpg') no-repeat center center/cover;
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    border-radius: 0px;
+  }
+
+  .containerr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0px;
+  }
+
+  .booking-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 75vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  .booking-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .form-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: red;
+    font-size: 20px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group.row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .form-group.row div {
+    flex: 1;
+    position: relative;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .info-section {
+    width: 65%;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .info-section h4 {
+    color: #ff0000;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .info-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 25px;
+  }
+
+  .card {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .card .icon {
+    font-size: 24px;
+    color: red;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+
+
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: #555;
+  }
+
+//   Meet Our Amazing Team
+
+.team-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #fff;
+  }
+  
+  .section-subtitle {
+    color: #ff4500;
+    font-size: 14px;
+    margin-top: 0px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    padding: 15px;
+    text-align: left;
+    position: relative;
+  }
+  
+  .member-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .member-role {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .info-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .info-button i {
+    color: #ff4500;
+    font-size: 16px;
+  }
+  
+  .info-button:hover {
+    background-color: #ff4500;
+    transform: scale(1.1);
+  }
+  
+  .info-button:hover i {
+    color: #fff;
+  }
+
+//   Our Services
+
+.services-section {
+    text-align: center;
+    padding: 0px 20px;
+    background-color: #fff;
+  }
+
+  .services-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    position: relative;
+  }
+
+  .services-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    margin: 10px auto 0;
+  }
+
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .service-item {
+    width: 265px;
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .service-item:hover {
+    transform: scale(1.05);
+    background-color: black;
+    color: white;
+  }
+
+  .service-icon {
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #ff0000;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  .service-item:hover .service-icon {
+    /* opacity: 0.5; Make icon slightly transparent on hover */
+    color: #ff0000; /* Change icon color to white for better visibility */
+  }
+
+  .service-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: inherit;
+  }
+
+  .service-description {
+    font-size: 14px;
+    color: inherit;
+  }
+
+//   Satisfied Customers
+
+
+.customer-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .customer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .customer-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .customer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .customer-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .customer-info {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .customer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .location {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  .customer-rating {
+    margin: 10px 0;
+  }
+  
+  .customer-rating i {
+    color: #f4b400;
+    margin-right: 2px;
+  }
+  
+  .customer-review {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin: 10px 0;
+  }
+  
+  .service-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .service-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .service-info img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+
+
+
+// footer input
+
+
+.mechanic-image {
+    position: relative;
+    img{
+        width: 100%;
+        position: absolute;
+        top: -120px;
+    }
+}
+
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    position: absolute;
+    gap: 0px;
+    left: 12%;
+
+}
+
+.main-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+/* Left Section - Book Now */
+.left-section {
+    flex: 1.5;
+    background: #ffffff;
+    padding: 20px;
+    position: relative;
+    height: 200px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #d41010;
+}
+
+.left-section h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00204A;
+    margin-bottom: 10px;
+}
+
+.left-section p {
+    font-size: 0.75rem;
+    color: #3e3e3e;
+    margin-bottom: 15px;
+}
+
+.left-section .btn {
+    background-color: #d41010;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+}
+
+.left-section .btn:hover {
+    background-color: #b90f0f;
+}
+
+/* Right Section - Subscribe */
+.right-section {
+    flex: 1;
+    text-align: center;
+    background-color: #01387f;
+    height: 200px;
+    color: white;
+    padding: 20px;
+    max-width: 450px;
+    z-index: 1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.right-section h2 {
+    padding: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.right-section input {
+    padding: 8px;
+    width: 85%;
+    max-width: 400px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.right-section button {
+    padding: 8px;
+    width: 85%;
+    max-width: 380px;
+    background-color: #100202;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.right-section button:hover {
+    background-color: #b90f0f;
+}
+
+
+
+

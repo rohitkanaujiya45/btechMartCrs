@@ -1,0 +1,448 @@
+<top-banners></top-banners>
+<modules></modules>
+
+
+<!-- <section class="conatiner">
+    <div class="offers">
+      <h4>Hot Deals & Offer</h4>
+      <div class="row">
+        <div class="col-3" >
+          <div class="cards">
+            <div class="offer-card blue">
+              <div class="hotDealsOffers">
+                  <button class="buy-button">Buy Bike</button>
+                <p style="margin-bottom: 0px;">Get up to</p>
+                <p>₹ 15,000 Off</p>
+                <button>View Offers</button>
+              </div>
+              <img src="https://w7.pngwing.com/pngs/9/277/png-transparent-red-and-black-honda-cbr-sports-bike-with-blue-background-honda-cbr1000rr-motorcycle-car-honda-cbr-series-honda-cbr1000rr-sport-bike-exhaust-system-vehicle-rim-thumbnail.png" alt="Bike">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section> -->
+
+
+<!-- Popular Vehicles  1 -->
+<section class="conatiner">
+  <div >
+    <div class="header3">
+      <h2>Popular Vehicle</h2>
+      <a  class="view-all">View All</a>
+    </div>
+
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+        <div class="col-md-2 col-6">
+          <div class="card1">
+            <div class="card-image">
+              <img src="https://legendarybikes.in/assets/images/img-blog-main-2-823x549.jpg" alt="Vehicle">
+            </div>
+            <span class="badgeRed">USED</span>
+            <div class="card-content1">
+              <h3>Mahindra Thar</h3>
+              <p class="price">Rs 11.35 - 17.60 Lakh*</p>
+              <p class="description">Modern and rugged SUV appearance.</p>
+            </div>
+            <button class="btn">Enquire now</button>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+  <div class="banner">
+    <img src="https://static.vecteezy.com/system/resources/previews/025/754/918/non_2x/farm-tractor-banner-illustration-with-wheat-field-in-the-background-agriculture-and-farming-agribusiness-tracktor-rural-landscape-design-elements-for-info-graphic-websites-and-print-media-vector.jpg" alt="Car Banner">
+</div>
+</section>
+
+
+<!-- Featured Yachts  Start -->
+<section class="conatiner2">
+  <div class="container2">
+    <div class="header2">
+      <h2>Featured Yachts</h2>
+      <a class="view-all">View all</a>
+    </div>
+
+    <div class="cards2">
+      <div class="card2" style="background-image: url('../../../assets/img/yatch/1.jpg');">
+        <img src="../../../assets/img/yatch/bat.jpg" alt="Badge" class="yatchBatch">
+        <div class="card-content2">
+          <h3>2011 Discovery 67</h3>
+          <p>Brisbane, Queensland</p>
+        </div>
+        <button class="enquire-bttn">Enquire now</button>
+      </div>
+
+      <div class="card2" style="background-image: url('../../../assets/img/yatch/2.jpg');">
+        <img src="../../../assets/img/yatch/bat.jpg" alt="Badge" class="yatchBatch">
+        <div class="card-content2">
+          <h3>2011 Discovery 67</h3>
+          <p>Brisbane, Queensland</p>
+        </div>
+        <button class="enquire-bttn">Enquire now</button>
+      </div>
+
+      <div class="card2" style="background-image: url('../../../assets/img/yatch/2.webp');">
+        <img src="../../../assets/img/yatch/bat.jpg" alt="Badge" class="yatchBatch">
+        <div class="card-content2">
+          <h3>2011 Discovery 67</h3>
+          <p>Brisbane, Queensland</p>
+        </div>
+        <button class="enquire-bttn">Enquire now</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Featured Yachts  End -->
+
+<!-- Aircraft  Section Start-->
+<section class="conatiner">
+  <div >
+    <div class="header3">
+      <h2>Aircrafts</h2>
+      <a  class="view-all">View All</a>
+    </div>
+
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+        <div class="col-md-2 col-6">
+          <div class="card3">
+            <div class="card-image">
+              <img src="https://assets.paramountbusinessjets.com/media/Aircrafts/categories/midsize.jpg.webP" alt="Vehicle">
+        
+            </div>
+            <span class="badge">SALE</span>
+            <div class="card-content3">
+              <p class="description">Private Jets For Sale</p>
+            </div>
+            <button class="btn">Enquire now</button>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+  <div class="banner">
+    <img src="https://static.vecteezy.com/system/resources/previews/025/754/918/non_2x/farm-tractor-banner-illustration-with-wheat-field-in-the-background-agriculture-and-farming-agribusiness-tracktor-rural-landscape-design-elements-for-info-graphic-websites-and-print-media-vector.jpg" alt="Car Banner">
+</div>
+</section>
+<!-- Aircraft  Section ENd-->
+
+
+<!-- new vehicles Start-->
+<section class="conatiner">
+  <div class="header4">
+    <h2>New Vehicles</h2>
+    <a class="view-all">View All</a>
+  </div>
+  <div class="tabs forMobile">
+    <a [ngClass]="activeTab == 'newcars' ? 'active' : ''" (click)="showTab('newcars', 'new')">Cars</a>
+    <a [ngClass]="activeTab == 'newbike' ? 'active' : ''" (click)="showTab('newbike', 'new')">Bike</a>
+    <a [ngClass]="activeTab == 'newjet' ? 'active' : ''" (click)="showTab('newjet', 'new')">Jet</a>
+    <a [ngClass]="activeTab == 'newjcb' ? 'active' : ''" (click)="showTab('newjcb', 'new')">JCB</a>
+    <a [ngClass]="activeTab == 'newtruck' ? 'active' : ''" (click)="showTab('newtruck', 'new')">Truck</a>
+    <a [ngClass]="activeTab == 'newbus' ? 'active' : ''" (click)="showTab('newbus', 'new')">Bus</a>
+  </div>
+  
+  <div id="newcars" class="card-container4" *ngIf="activeTab == 'newcars'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img"
+              src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&height=900&width=1600&fit=bounds"
+              alt="Car">
+            <div class="badge">New</div>
+            <div class="badge red">Electric</div>
+          </div>
+          <div class="card-content4">
+            <h3>Mahindra Thar</h3>
+            <div class="price">Rs 11.35 - 17.60 Lakh*</div>
+            <div class="description">The 2023 Ford Territory has a modern appearance.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  
+  </div>
+  
+  <div id="newbike" class="card-container4" *ngIf="activeTab == 'newbike'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img" src="https://cdn.bikedekho.com/processedimages/yamaha/r15-v4/source/r15-v466e5433ef20f5.jpg"
+              alt="Bike">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">New</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">Electric</div>
+          </div>
+          <div class="card-content4">
+            <h3>Yamaha R15 V4</h3>
+            <div class="price">Rs 1.65 Lakh*</div>
+            <div class="description">The Yamaha R15 V4 is a high-performance sportbike.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  
+  <div id="newjet" class="card-container4" *ngIf="activeTab == 'newjet'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img"
+              src="https://jetlevel.com/wp-content/uploads/2022/08/DALL%C2%B7E-2024-02-04-08.16.56-A-digital-artwork-for-a-blog-feature-image-focusing-solely-on-the-worlds-fastest-private-jet.-The-jet-is-depicted-soaring-high-in-the-sky-showcasin.webp"
+              alt="Jet">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">New</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">Electric</div>
+          </div>
+          <div class="card-content4">
+            <h3>Private Jet</h3>
+            <div class="price">Price on Request</div>
+            <div class="description">A world-class private jet designed for luxury and speed.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  
+  <div id="newjcb" class="card-container4"  *ngIf="activeTab == 'newjcb'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img" src="https://3.imimg.com/data3/AV/EQ/MY-14119129/metro-plant-service.jpg" alt="JCB">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">New</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">Electric</div>
+          </div>
+          <div class="card-content4">
+            <h3>JCB Machine</h3>
+            <div class="price">Rs 20 Lakh*</div>
+            <div class="description">Durable and efficient JCB machines for construction.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div id="newtruck" class="card-container4" *ngIf="activeTab == 'newtruck'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img" src="https://www.grimmsautomovation.com/blog/wp-content/uploads/2024/05/truck-1024x585.jpg"
+              alt="Truck">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">New</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">Electric</div>
+          </div>
+          <div class="card-content5">
+            <h3>Heavy Duty Truck</h3>
+            <div class="price">Rs 30 Lakh*</div>
+            <div class="description">A powerful truck built to handle the toughest loads.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div id="newbus" class="card-container4" *ngIf="activeTab == 'newbus'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card4">
+          <div style="position: relative;">
+            <img class="img"
+              src="https://buscdn.cardekho.com/in/ashok-leyland/oyster-tourist-bus/ashok-leyland-oyster-tourist-bus.jpg"
+              alt="Bus">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">New</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">Electric</div>
+          </div>
+          <div class="card-content5">
+            <h3>Ashok Leyland Bus</h3>
+            <div class="price">Rs 50 Lakh*</div>
+            <div class="description">Comfortable and spacious buses for city and tourist services.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  
+  <div class="banner">
+    <img
+      src="https://cdn-lkcpf.nitrocdn.com/XTYntqBOphWMWHDLGvhimIJocOxWgFVP/assets/images/optimized/rev-e3119c0/travelsaga.com/wp-content/uploads/2024/11/image-70-Ft-Luxury-Yacht-bt-banner-.jpg"
+      alt="Ad Banner">
+  </div>
+</section>
+<!-- new vehicles End-->
+
+<section class="conatiner5">
+  <div class="header5">
+    <h2>Used Vehicles To Suit Your Lifestyle</h2>
+    <a href="#" class="view-all">View All</a>
+  </div>
+  <div class="tabs forMobile">
+    <a [ngClass]="activeTab2 == 'cars' ? 'active' : ''" (click)="showTab('cars','old')">Cars</a>
+    <a [ngClass]="activeTab2 == 'bike' ? 'active' : ''" (click)="showTab('bike','old')">Bike</a>
+    <a [ngClass]="activeTab2 == 'jet' ? 'active' : ''" (click)="showTab('jet','old')">Jet</a>
+    <a [ngClass]="activeTab2 == 'jcb' ? 'active' : ''" (click)="showTab('jcb','old')">JCB</a>
+    <a [ngClass]="activeTab2 == 'truck' ? 'active' : ''" (click)="showTab('truck','old')">Truck</a>
+    <a [ngClass]="activeTab2 == 'bus' ? 'active' : ''" (click)="showTab('bus','old')">Bus</a>
+  </div>
+  
+  <div id="cars" class="card-container5" *ngIf="activeTab2 == 'cars'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card5">
+          <div style="position: relative;">
+            <img class="img"
+              src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&height=900&width=1600&fit=bounds"
+              alt="Car">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">Featured</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">2022</div>
+          </div>
+          <div class="card-content5">
+            <h3>Mahindra Thar</h3>
+            <div class="price">Rs 11.35 - 17.60 Lakh*</div>
+            <div class="description">The 2023 Ford Territory has a modern appearance.</div>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  
+  <div id="bike" class="card-container5" *ngIf="activeTab2 == 'bike'">
+    <div class="row">
+      @for (item of airCraftData; track $index) {
+      <div class="col-md-2 col-6">
+        <div class="card5">
+          <div style="position: relative;">
+            <img class="img" src="https://cdn.bikedekho.com/processedimages/yamaha/r15-v4/source/r15-v466e5433ef20f5.jpg"
+              alt="Bike">
+            <div class="badge" style="border-radius: 13px 13px 13px 13px;left: 8px;">Featured</div>
+            <div class="badge red" style="border-radius: 13px 13px 13px 13px;">2022</div>
+          </div>
+          <div class="card-content5">
+            <h3>Yamaha R15 V4</h3>
+            <div class="price">Rs 1.65 Lakh*</div>
+            <div class="description">The Yamaha R15 V4 is a high-performance sportbike.</div>
+            <button class="enquire-btn">Enquire now</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<app-carousel-component></app-carousel-component>
+
+
+<section class="conatiner">
+  <h2 style="margin-top: 1em;">Blogs to Help Choose Your Vehicle</h2>
+  <div class="vehicle-cards-wrapper7">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="vehicle-card7">
+          <img src="https://www.rushlane.com/wp-content/uploads/2024/02/2024-mahindra-xuv700-tvc-launch.jpg"
+            alt="Image 1">
+          <div class="vehicle-card-content7">
+            <h3>10 Most Affordable Cars in India Equipped With Advanced Driver Assistance Systems</h3>
+            <button>Dec 10, 2014</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="vehicle-card7">
+          <img src="https://carzoom.in/wp-content/uploads/2024/08/Mahindra-XUV-700.jpg" alt="Image 2">
+          <div class="vehicle-card-content7">
+            <h3>10 Most Affordable Cars in India Equipped With Advanced Driver Assistance Systems</h3>
+            <button>Dec 11, 2014</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="vehicle-card7">
+          <img src="https://icsec.in/wp-content/uploads/2024/11/Mahindra-XUV-700-1.jpg" alt="Image 3">
+          <div class="vehicle-card-content7">
+            <h3>10 Most Affordable Cars in India Equipped With Advanced Driver Assistance Systems</h3>
+            <button>Dec 12, 2014</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<app-testimonial></app-testimonial>
+
+
+
+<section class="container">
+  <div class="container" style="position: relative; bottom: -48px;">
+      <div class="row">
+          <div class="col-8" style="padding: 0px;">
+              <div class="left-section">
+                 <div class="row">
+                  <div class="col-8" style="padding: 0px;">
+                      <p>Problem with your car? Don’t worry, we can help you. Feel free to contact with our team!</p>
+                      <h2>1800-123-4567</h2>
+                      <button class="btn">Book Now</button>
+                  </div>
+                  <div class="col-4" style="padding: 0px;">
+                      <div class="mechanic-image">
+                          <img src="../../../assets/img/men2.png" alt="Mechanic" />
+                      </div>
+                  </div>
+                 </div>
+              </div>
+          </div>
+          <div class="col-4" style="padding: 0px;z-index: 1;">
+              <div class="right-section">
+                  <h2>SUBSCRIBE FOR OFFER & DEALS</h2>
+                  <input type="email" placeholder="Enter your email address">
+                  <button>Subscribe</button>
+                  
+              </div>
+          </div>
+      </div>
+  </div>    
+</section>
+
+<!-- footer input -->
+
+

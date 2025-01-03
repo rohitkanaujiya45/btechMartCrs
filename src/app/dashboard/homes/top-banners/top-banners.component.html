@@ -1,0 +1,60 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-4">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Find What Are You Looking For!</h1>
+                    <p class="highlight">Over 5000+ Latest Cars in BTechcars</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <button class="know-more-btn" style="border-radius: 20px;">Know More</button>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-8">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                    <img src="../../../../assets/img/carsosole/1.png" style=" aspect-ratio: 3 / 1;object-fit: contain;">
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img src="../../../../assets/img/carsosole/b1.png" style=" aspect-ratio: 3 / 1;object-fit: contain;">
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+
+<section class="search-section">
+    <div class="conatiner">
+        <h4>I WANT TO BUY / SELL OR BOOK VEHICLE SERVICE</h4>
+
+        <div class="buttons">
+            <a routerLink="/car-list">
+            <button class="red-btn"> New Vehicle</button>
+        </a>
+            <a routerLink="/car-list">
+                <button class="blu-btn">Used Vehicle</button>
+              </a>
+              
+
+              <a routerLink="/vehicle-service">
+            <button class="blu-btn">Vehicle Service</button>
+        </a>
+        </div>
+
+        <div class="filters">
+            <select>
+                <option>Select vehicle type</option>
+            </select>
+            <select>
+                <option>Select brand</option>
+            </select>
+            <select>
+                <option>Select model</option>
+            </select>
+            <select>
+                <option>Select year</option>
+            </select>
+            <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+    </div>
+</section>

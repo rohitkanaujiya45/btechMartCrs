@@ -1,0 +1,29 @@
+.brands-section {
+    margin-bottom: 30px;
+  }
+  
+  .brands-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+  
+  .brands img {
+    width: 150px;
+    height: 140px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+//   .brands img:hover {
+//     transform: scale(1.1);
+//   }
